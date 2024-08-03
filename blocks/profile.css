@@ -9,11 +9,13 @@
   width: 190px;
   height: 190px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
   display: flex;
   flex-direction: column;
+  max-width: 420px;
 }
 
 .profile__name {
@@ -21,16 +23,33 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__description {
   margin: 0;
   line-height: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: nowrap;
 }
 
-.profile__edit-pin {
+.profile__edit-btn {
   margin-top: auto;
-  color: #212121;
+  color: rgba(33, 33, 33, 0.8);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 118px;
+}
+
+.profile__edit-btn:hover {
+  color: rgba(33, 33, 33, 1);
 }
 
 .profile__pencil-icon {
@@ -48,6 +67,11 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+}
+
+.profile__add-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .profile__plus-icon {

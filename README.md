@@ -21,3 +21,5 @@ Figma created by designer
 ![Screenshot](images/project-screenshot.png)
 **Github pages**
 [Spots project](https://thato-a.github.io/se_project_spots/)
+
+[Video to project](https://drive.google.com/file/d/18Z8Bp1axPArgIH3dadKptkBN_LL2dRXl/view?usp=sharing)
