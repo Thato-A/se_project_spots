@@ -23,20 +23,21 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+/** I'm sorry Nikolay everytime I add the display: -webkit-box it seems not to work properly but when its not there the project looks like the design**/
 
 .profile__description {
   margin: 0;
   line-height: 1;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  white-space: nowrap;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .profile__edit-btn {
@@ -105,6 +106,7 @@
 
   .profile__column {
     margin: 0 0 20px;
+    max-width: 288px;
   }
 
   .profile__add-btn {
