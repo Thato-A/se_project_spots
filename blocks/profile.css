@@ -23,17 +23,17 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 1;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/** I'm sorry Nikolay everytime I add the display: -webkit-box it seems not to work properly but when its not there the project looks like the design**/
-
 .profile__description {
   margin: 0;
   line-height: 1;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
