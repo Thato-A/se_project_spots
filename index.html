@@ -72,7 +72,11 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
+                minlength="2"
+                maxlength="40"
+                required
               />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -81,7 +85,14 @@
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
+                minlength="2"
+                maxlength="200"
+                required
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
@@ -100,7 +111,9 @@
                 name="link"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
+              <span id="add-card-link-input-error" class="modal__error"></span>
             </label>
             <label for="add-card-name-input" class="modal__label">
               Caption
@@ -110,9 +123,18 @@
                 name="name"
                 class="modal__input"
                 placeholder="Type your caption"
+                minlength="2"
+                maxlength="30"
+                required
               />
+              <span id="add-card-name-input-error" class="modal__error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button
+              type="submit"
+              class="modal__submit-btn modal__submit-btn_disabled"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -128,5 +150,6 @@
       </div>
     </div>
     <script defer src="./script/index.js"></script>
+    <script ddfer src="./script/validation.js"></script>
   </body>
 </html>
