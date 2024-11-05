@@ -89,10 +89,19 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keyup", closeModalOnEsc);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keyup", closeModalOnEsc);
+}
+
+function closeModalOnEsc(evt) {
+  if (evt.key === "Escape") {
+    const activeModal = document.querySelector(".modal_opened");
+    closeModal(activeModal);
+  }
 }
 
 function handleEditFormSubmit(evt) {
@@ -137,6 +146,12 @@ cardModalBtn.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 cardForm.addEventListener("submit", handleAddCardSubmit);
+
+//document.addEventListener("keydown", (evt) => {
+// if (evt.key === "Escape") {
+////   closeModal(modal);
+// }
+//});
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
