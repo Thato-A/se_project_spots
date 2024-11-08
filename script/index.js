@@ -52,7 +52,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
-const modalElement = document.querySelectorAll(".modal");
+const modalElements = document.querySelectorAll(".modal");
 
 const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
@@ -145,10 +145,10 @@ editFormElement.addEventListener("submit", handleEditFormSubmit);
 
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
-modalElement.forEach((modalElement) => {
-  modalElement.addEventListener("click", (evt) => {
+modalElements.forEach((modalElements) => {
+  modalElements.addEventListener("click", (evt) => {
     if (evt.target.classList.contains("modal")) {
-      closeModal(modalElement);
+      closeModal(modalElements);
     }
   });
 });
