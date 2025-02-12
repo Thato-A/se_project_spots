@@ -2,7 +2,7 @@
 
 ### Project Description
 
-The Spots project is a site where users can upload their favourite images. Currently the projects features a user profile with the user's image, description and a grid display of photograghs. More features coming soon!
+The Spots project is a site where users can upload their favourite images. The images can be enlarged and liked by the user.
 
 **Technologies and Techniques used**
 Semantic HTML5
