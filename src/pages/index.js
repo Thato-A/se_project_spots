@@ -73,7 +73,7 @@ const editSubmitBtn = editModal.querySelector(".modal__submit-btn");
 const avatarModal = document.querySelector("#avatar-modal");
 const avatarForm = avatarModal.querySelector(".modal__form");
 const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
-const avatarLinkInput = avatarModal.querySelector("#profile-avatar-input");
+const avatarInput = avatarModal.querySelector("#profile-avatar-input");
 
 //delete form elements
 const deleteModal = document.querySelector("#delete-modal");
@@ -123,9 +123,8 @@ function handleDeleteCard(cardElement, cardId) {
 }
 
 function handleLike(evt, id) {
-  console.log(id);
   const isLiked = evt.target.classList.contains("card__like-btn_liked");
-  console.log(isLiked);
+
   api
     .changeLikeStatus(id, isLiked)
     .then(() => {
@@ -219,7 +218,6 @@ function handleAddCardSubmit(evt) {
       evt.target.reset();
       closeModal(cardModal);
       disableButton(cardSubmitBtn, settings);
-      console.log(cardSubmitBtn);
     })
     .catch(console.error)
     .finally(() => {
@@ -231,26 +229,24 @@ function handleAvatarSubmit(evt) {
   evt.preventDefault();
   setButtonText(avatarSubmitBtn, true, "Save", "Saving...");
 
-  const avatarInput = document.getElementById("profile-avatar-input");
-
   api
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
-      document.getElementById("image-avatar").src = data.avatar;
+      avatarImage.src = data.avatar;
       closeModal(avatarModal);
-      avatarLinkInput.value = "";
+      avatarInput.value = "";
       disableButton(avatarSubmitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {
-      setButtonText(avatarSubmitBtn, true, "Save", "Saving...");
+      setButtonText(avatarSubmitBtn, false, "Save", "Saving...");
     });
 }
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  disableButton(editSubmitBtn, settings);
+  resetValidation(editFormElement, settings);
   openModal(editModal);
 });
 
