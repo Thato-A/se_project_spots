@@ -31,6 +31,15 @@
   border-radius: 8px;
 }
 
+.modal__container_type_delete {
+  position: relative;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .modal__image {
   width: 100%;
   max-width: 80vw;
@@ -52,6 +61,13 @@
 
 .modal__close-btn:hover {
   background-image: url(../images/close-btn-dark.svg);
+}
+
+.modal__close-btn_type_delete {
+  position: absolute;
+  right: -39px;
+  top: -6px;
+  background-image: url("../images/close-btn-light.svg");
 }
 
 .modal__content_type_preview {
@@ -96,6 +112,10 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
+}
+
+.modal__title_type_delete {
+  font-size: 24px;
 }
 
 .modal__label {
@@ -145,6 +165,34 @@
   opacity: 50%;
 }
 
+.modal__form_type_delete {
+  display: flex;
+  gap: 20px;
+}
+
+.modal__submit-btn_type_delete {
+  background-color: rgba(255, 101, 101, 1);
+  border: none;
+  color: #000;
+}
+
+.modal__submit-btn_type_delete:hover {
+  background-color: rgba(255, 51, 51, 1);
+  cursor: pointer;
+}
+
+.modal__submit-btn_type_cancel {
+  border: 1px solid rgba(33, 33, 33, 1);
+  background-color: rgba(255, 255, 255, 1);
+  color: #000;
+}
+
+.modal__submit-btn_type_cancel:hover {
+  background-color: rgba(33, 33, 33, 1);
+  color: #fff;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
@@ -154,14 +202,29 @@
     padding: 12px;
   }
 
+  .modal__container_type_delete {
+    max-width: 380px;
+    padding-bottom: 24px;
+  }
+
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
 
+  .modal__close-btn_type_delete {
+    right: -8px;
+    top: -43px;
+  }
+
   .modal__title {
     font-size: 20px;
     margin: 10px 0 34px;
+  }
+
+  .modal__title_type_delete {
+    margin: 0 0 20px;
+    width: 225px;
   }
 
   .modal__label {
@@ -185,5 +248,13 @@
   .modal__caption {
     font-size: 16px;
     line-height: 19.2px;
+  }
+
+  .modal__form_type_delete {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 156px;
+    height: 116px;
   }
 }
