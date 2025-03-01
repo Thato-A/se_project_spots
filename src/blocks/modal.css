@@ -34,7 +34,6 @@
 .modal__container_type_delete {
   position: relative;
   max-width: 630px;
-  height: 172px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,14 +202,29 @@
     padding: 12px;
   }
 
+  .modal__container_type_delete {
+    max-width: 380px;
+    padding-bottom: 24px;
+  }
+
   .modal__close-btn {
     top: 12px;
     right: 12px;
   }
 
+  .modal__close-btn_type_delete {
+    right: -8px;
+    top: -43px;
+  }
+
   .modal__title {
     font-size: 20px;
     margin: 10px 0 34px;
+  }
+
+  .modal__title_type_delete {
+    margin: 0 0 20px;
+    width: 225px;
   }
 
   .modal__label {
@@ -234,5 +248,13 @@
   .modal__caption {
     font-size: 16px;
     line-height: 19.2px;
+  }
+
+  .modal__form_type_delete {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 156px;
+    height: 116px;
   }
 }
